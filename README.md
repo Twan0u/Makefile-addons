@@ -31,7 +31,7 @@ Modules are composed with one or more scipts that can solves a single problem.
 ### Script
 Scripts are some small codes that are used to build more complex scripts that are used to build modules.
 ### Help
-the help command that can be used to see all commands that can be used. You can found help with command :
+the help command that can be used to see all usefull commands that can be used. You can found help with command :
 ``` make
 make help
 ```
@@ -39,12 +39,14 @@ or
 ``` make
 make
 ```
+Others commands can be found in the documentation bellow
 
 ## Addons
 ### Addon std
 #### require
 /
 #### Color module
+
 ##### Variables
 COM_COLOR   = dark blue
 OBJ_COLOR   = light blue
@@ -55,10 +57,15 @@ NO_COLOR    = no color
 ##### Scripts
 std_color -> display the colors in a terminal
 ##### Usage
-you can use color variables inside your comment line like this :
+This script display an exemple of colors that can be used
+``` make
+make std_color
+```
+You can use color variables inside your comment line like this :
 ``` make
 @ echo -e "Couleur OK : $(OK_COLOR) texte $(NO_COLOR)"
 ```
+
 ### Addon pic
 This module contains modules to work with pictures
 #### require
@@ -71,11 +78,7 @@ PATH_OPTI= path of the output of the compressed files (path from the root of the
 QUALITY= express quality of compression of the pictures
 EXTENSION = extension of the pictures (jpg,png,...)
 ##### Scripts
-
 ##### Usage
-
-
-
 
 
 
