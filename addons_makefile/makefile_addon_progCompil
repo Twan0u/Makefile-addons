@@ -1,0 +1,22 @@
+.PHONY: progCompil_myprog
+
+# Contenu de l'addon :
+# -progCompil_myprog
+#
+# ----------program compilation module---------
+CC=gcc
+PROG_NAME=run
+
+main.o: main.c libfractal/fractal.h # Construit l'objet du programme principal
+
+	@ echo -e "$(WARN_COLOR)Compilation$(NO_COLOR) de $(OBJ_COLOR)$@$(NO_COLOR)"
+		$(CC) -c main.c libfractal/fractal.h
+
+progCompil_myprog: main.o libfractal/fractal.h ## Génère l'exécutable du Projet
+
+		@ echo -e "$(WARN_COLOR)Compilation$(NO_COLOR) du projet sous le nom de $(OBJ_COLOR)$(PROG_NAME)$(NO_COLOR)"
+		mkdir -p bin
+		$(CC) -o bin/$(PROG_NAME) main.o
+		@ echo -e "$(OK_COLOR)SUCCES$(NO_COLOR) : le programme $(OBJ_COLOR)$(PROG_NAME)$(NO_COLOR) a bien été compilé"
+
+# ----------END program compilation module---------

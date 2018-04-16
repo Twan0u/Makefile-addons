@@ -1,0 +1,23 @@
+.PHONY: std_color
+
+
+# Contenu de l'addon :
+# -std_color
+#
+# ----------color module---------
+COM_COLOR   = \033[0;34m
+OBJ_COLOR   = \033[0;36m
+OK_COLOR    = \033[0;32m
+ERROR_COLOR = \033[0;31m
+WARN_COLOR  = \033[0;33m
+NO_COLOR    = \033[m
+
+std_color: ## Affiche les couleurs disponibles pour écrire dans la console
+
+	@ echo -e "Couleur NO : $(NO_COLOR) texte $(NO_COLOR)"
+	@ echo -e "Couleur COM : $(COM_COLOR) texte $(NO_COLOR)"
+	@ echo -e "Couleur OBJ : $(OBJ_COLOR) texte $(NO_COLOR)"
+	@ echo -e "Couleur OK : $(OK_COLOR) texte $(NO_COLOR)"
+	@ echo -e "Couleur ERROR : $(ERROR_COLOR) texte $(NO_COLOR)"
+	@ echo -e "Couleur WARN : $(WARN_COLOR) texte $(NO_COLOR)"
+# ---------- END color module---------

@@ -1,0 +1,27 @@
+.PHONY: pic_compress
+
+# Contenu de l'addon :
+# -pic_compress
+#
+# ----------compress module---------
+PATH_RAW=images/raw/
+PATH_OPTI=images/optimized/
+QUALITY=85
+EXTENSION =jpg
+
+RAW_IMAGES=$(subst $(PATH_RAW),$(PATH_OPTI),$(wildcard $(PATH_RAW)*.$(EXTENSION)))
+
+$(PATH_OPTI)%.$(EXTENSION): $(PATH_RAW)%.$(EXTENSION)
+
+		@ echo -e "$(WARN_COLOR)Compression$(NO_COLOR) de $(OBJ_COLOR)$<$(NO_COLOR)"
+		mkdir -p $(PATH_OPTI)
+		#guetzli --quality $(QUALITY) $< $@
+		@ echo -e "$(OK_COLOR)Réussite$(NO_COLOR) : L'image $(OBJ_COLOR)$<$(NO_COLOR) a bien été compressée"
+
+pic_compress: $(RAW_IMAGES) ## -images- Compresse les images
+
+		@ echo -e "$(COM_COLOR)----------$(NO_COLOR)"
+		@ echo -e "$(OK_COLOR)Fin de la compression$(NO_COLOR)"
+		@ echo -e "$(COM_COLOR)----------$(NO_COLOR)"
+
+# ----------END compress module---------
