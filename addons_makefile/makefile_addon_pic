@@ -15,7 +15,7 @@ $(PATH_OPTI)%.$(EXTENSION): $(PATH_RAW)%.$(EXTENSION)
 
 		@ echo -e "$(WARN_COLOR)Compression$(NO_COLOR) de $(OBJ_COLOR)$<$(NO_COLOR)"
 		mkdir -p $(PATH_OPTI)
-		#guetzli --quality $(QUALITY) $< $@
+		guetzli --quality $(QUALITY) $< $@
 		@ echo -e "$(OK_COLOR)Réussite$(NO_COLOR) : L'image $(OBJ_COLOR)$<$(NO_COLOR) a bien été compressée"
 
 pic_compress: $(RAW_IMAGES) ## -images- Compresse les images
