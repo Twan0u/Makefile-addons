@@ -18,7 +18,7 @@ $(PATH_OPTI)%.$(EXTENSION): $(PATH_RAW)%.$(EXTENSION)
 		guetzli --quality $(QUALITY) $< $@
 		@ echo -e "$(OK_COLOR)Réussite$(NO_COLOR) : L'image $(OBJ_COLOR)$<$(NO_COLOR) a bien été compressée"
 
-pic_compress: $(RAW_IMAGES) ## -images- Compresse les images
+pic_compress: $(RAW_IMAGES) ## Compresse les images
 
 		@ echo -e "$(COM_COLOR)----------$(NO_COLOR)"
 		@ echo -e "$(OK_COLOR)Fin de la compression$(NO_COLOR)"
