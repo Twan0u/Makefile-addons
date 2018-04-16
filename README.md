@@ -1,7 +1,7 @@
 # Makefile-addons
 Makefile-addons gives some usefull tools to make the use of makefiles more easy.
 
-##Summary
+## Summary
 
 * How does it work ?
   * Let's begin
@@ -48,12 +48,12 @@ Others commands can be found in the documentation bellow
 #### Color module
 
 ##### Variables
-COM_COLOR   = dark blue
-OBJ_COLOR   = light blue
-OK_COLOR    = green
-ERROR_COLOR = red
-WARN_COLOR  = yellow
-NO_COLOR    = no color
+* COM_COLOR   = dark blue
+* OBJ_COLOR   = light blue 
+* OK_COLOR    = green   
+* ERROR_COLOR = red   
+* WARN_COLOR  = yellow
+* NO_COLOR    = no color
 ##### Scripts
 std_color -> display the colors in a terminal
 ##### Usage
